@@ -1,0 +1,22 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-6" *ngIf="menuData">
+            <a routerLink="../../menu" class="btn btn-sm btn-dark mb-3">Vissza</a>
+            <img src="{{menuData[0].foodImg}}" width="100%" />
+            <h1 class="mt-3">{{menuData[0].foodName}}</h1>
+            <p>{{menuData[0].foodDetails}}</p>
+            <p>{{menuData[0].foodPrice | currency: 'EUR'}}</p>
+        </div>
+
+        <div class="col-lg-6">
+            <h1 class="mt-5">Ird be a részleteket</h1>
+            <form>
+                <input type="text" class="form-control" placeholder="Vezeték és keresztnév">
+                <input type="text" class="form-control" placeholder="Telefonszám">
+                <textarea class="form-control" placeholder="Ird be a cimedet"></textarea>
+                <button class="btn btn-md btn-dark mt-3">Rendelés leadás</button>
+            </form>
+        </div>
+
+    </div>
+</div>
